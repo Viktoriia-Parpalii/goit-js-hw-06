@@ -7,11 +7,21 @@ const ingredients = [
   "Condiments",
 ];
 
+// for (const ingredient of ingredients) {
+//   const createNameIngredients = document.createElement("li");
+//   createNameIngredients.textContent = ingredient;
+//   createNameIngredients.classList.add("item");
+//   // console.log(createNameIngredients);
+//   const ingredientsEl = document.querySelector("#ingredients");
+//   ingredientsEl.append(createNameIngredients);
+// }
+
+let array = [];
 for (const ingredient of ingredients) {
   const createNameIngredients = document.createElement("li");
   createNameIngredients.textContent = ingredient;
   createNameIngredients.classList.add("item");
-  // console.log(createNameIngredients);
-  const ingredientsEl = document.querySelector("#ingredients");
-  ingredientsEl.append(createNameIngredients);
+  array.push(createNameIngredients);
 }
+const ingredientsEl = document.querySelector("#ingredients");
+ingredientsEl.append(...array);

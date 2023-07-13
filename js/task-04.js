@@ -4,14 +4,16 @@ const decrementBtn = counterEl.firstElementChild;
 const incrementBtn = counterEl.lastElementChild;
 const valueEl = document.querySelector("#value");
 
-decrementBtn.addEventListener("click", () => {
-  counterValue -= 1;
-  //   console.log(counterValue);
-  valueEl.textContent = counterValue;
-});
+decrementBtn.addEventListener("click", decrement);
 
-incrementBtn.addEventListener("click", () => {
-  counterValue += 1;
-  //   console.log(counterValue);
+function decrement() {
+  counterValue -= 1;
   valueEl.textContent = counterValue;
-});
+}
+
+incrementBtn.addEventListener("click", increment);
+
+function increment() {
+  counterValue += 1;
+  valueEl.textContent = counterValue;
+}
