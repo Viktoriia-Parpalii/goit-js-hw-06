@@ -18,10 +18,10 @@ const ingredients = [
 
 let array = [];
 for (const ingredient of ingredients) {
-  const createNameIngredients = document.createElement("li");
-  createNameIngredients.textContent = ingredient;
-  createNameIngredients.classList.add("item");
-  array.push(createNameIngredients);
+  const createLi = document.createElement("li");
+  createLi.textContent = ingredient;
+  createLi.classList.add("item");
+  array.push(createLi);
 }
 const ingredientsEl = document.querySelector("#ingredients");
 ingredientsEl.append(...array);
